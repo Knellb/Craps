@@ -10,7 +10,10 @@ import java.util.Scanner;
 public class Craps
 {
     private double dieRoll;
-
+    
+    /**
+     * Runs a game of craps
+     */
     public static void main(String[] args)
     {
         System.out.println("Let's play craps!");
@@ -23,19 +26,19 @@ public class Craps
             System.out.println("On first roll, a 7 or an 11 wins, and a 2, 3, or 12 loses");
             System.out.println("If you roll another number you don't win or lose and that number becomes the 'point.'");
             System.out.println("You continue to roll the two dice again until: ");
-            System.out.println("a.  you roll the 'point' again and win!");
+            System.out.println("a. you roll the 'point' again and win!");
             System.out.println("b. you roll a 7 and lose.");
         }
-        System.out.print("Press <Enter> to roll...");
-        Scanner in2 = new Scanner(System.in);
-        String pause = in2.nextLine();
-
+        
         boolean cont = true;
-        boolean didTheyWin = true;
+        boolean didTheyWin = false;
         while (cont == true)
         {
             Die d1 = new Die();
             Die d2 = new Die();
+            System.out.print("Press <Enter> to roll...");
+            Scanner in2 = new Scanner(System.in);
+            String pause = in2.nextLine();
             int total = d1.roll() + d2.roll();
 
             if (total == 7 || total == 11)
@@ -50,23 +53,26 @@ public class Craps
             }
             else
             {
+                int roll = 1;
                 int winPoint = total;
-                System.out.println("your point is " + total);
+                System.out.println("Your point is " + total);
                 int lossPoint = 7;
-                while (total != lossPoint && total != winPoint)
+                while (total != lossPoint && total != winPoint || roll == 1)
                 {
+                    System.out.print("Press <Enter> to roll...");
+                    Scanner in3 = new Scanner(System.in);
+                    pause = in3.nextLine();
                     total = d1.roll() + d2.roll();
-                    System.out.println("rolled: " + total);
-                }
-                if (total == winPoint)
-                {
-                    //System.out.println(total);
-                    didTheyWin = true;
-                }
-                else
-                {
-                    //System.out.println(total);
-                    didTheyWin = false;
+                    System.out.println("roll " + roll + ": " + total);
+                    if (total == winPoint)
+                    {
+                        didTheyWin = true;
+                    }
+                    else
+                    {
+                        didTheyWin = false;
+                    }
+                    roll++;
                 }
             }
             if (didTheyWin == true)
@@ -78,11 +84,15 @@ public class Craps
                 System.out.println("Oh no! You lost.");
             }
             System.out.println("Play again (y/n)?");
-            Scanner in3 = new Scanner(System.in);
-            String replay = in3.next();
-            if (response.substring(0,1).equalsIgnoreCase("n"))
+            Scanner in4 = new Scanner(System.in);
+            String replay = in4.next();
+            if (replay.substring(0,1).equalsIgnoreCase("n"))
             {
                 cont = false;
+            }
+            else
+            {
+                cont = true;
             }
         }
     }

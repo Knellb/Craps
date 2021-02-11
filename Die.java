@@ -2,7 +2,7 @@
  * Write a description of class Die here.
  *
  * @author Ben Knell
- * @version (a version number or a date)
+ * @version 2021-2-2
  */
 public class Die
 {
@@ -19,10 +19,7 @@ public class Die
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * @return a random number between 1 and 6
      */
     public int roll()
     {
@@ -30,6 +27,9 @@ public class Die
         return roll;
     }
     
+    /**
+     * @return the most recent roll
+     */
     public int getResult()
     {
         return roll;

@@ -1,12 +1,13 @@
 #BlueJ class context
 comment0.target=Die
-comment0.text=\n\ Write\ a\ description\ of\ class\ Die\ here.\n\n\ @author\ Ben\ Knell\n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment0.text=\n\ Write\ a\ description\ of\ class\ Die\ here.\n\n\ @author\ Ben\ Knell\n\ @version\ 2021-2-2\n
 comment1.params=
 comment1.target=Die()
 comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Die\n
 comment2.params=
 comment2.target=int\ roll()
-comment2.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\n
+comment2.text=\n\ @return\ a\ random\ number\ between\ 1\ and\ 6\n
 comment3.params=
 comment3.target=int\ getResult()
+comment3.text=\n\ @return\ the\ most\ recent\ roll\n
 numComments=4

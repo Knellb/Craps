@@ -2,4 +2,5 @@
 comment0.target=Craps
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
+comment1.text=\n\ Runs\ a\ game\ of\ craps\n
 numComments=2
