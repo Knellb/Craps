@@ -97,3 +97,17 @@ public class Craps
         }
     }
 }
+
+
+/* 
+
+COMMENTS FROM THE INSTRUCTOR:
+
+This is a very nice version of this program, Ben. It would have been
+nice to have the default option available (Y/n) as suggested in the
+assignment handout. Otherwise, well done!
+
+SCORE: 14/15
+
+*/
+
